@@ -7,6 +7,7 @@ smartdns_path=/data/adb/smartdns
 
 ui_print "- unzip"
 unzip -o $ZIPFILE -x 'META-INF/*' -d $MODPATH >&2
+unzip -o "$MODPATH/bin/ca-certificates.zip" -d $smartdns_path/ssl/certs/ >&2
 
 ui_print "- create work dir"
 mkdir -p $smartdns_path/bin $smartdns_path/run $smartdns_path/config
