@@ -1,0 +1,6 @@
+id=smartdns
+name=smartdns
+version=1.0
+versionCode=1
+author=pymumu (module by 1465ghdg)
+description=运行 SmartDNS 服务
