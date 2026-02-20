@@ -9,6 +9,7 @@ ui_print "- unzip"
 unzip -o $ZIPFILE -x 'META-INF/*' -d $MODPATH >&2
 
 ui_print "- create work dir"
+mkdir $smartdns_path
 cp $MODPATH/bin/smartdns-aarch64 $smartdns_path/bin/smartdns
 cp $MODPATH/config/smartdns.conf $smartdns_path/config/smartdns.conf
 
