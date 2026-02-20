@@ -16,6 +16,10 @@ if [ ! -f "$smartdns_path/config/smartdns.conf" ]; then
     cp $MODPATH/config/smartdns.conf $smartdns_path/config/smartdns.conf
 fi
 
+ui_print "- create work file"
+touch $smartdns_path/cache/smartdns.cache
+touch $smartdns_path/log/smartdns.log
+
 ui_print "- set file permission"
 set_perm_recursive $MODPATH 0 0 0755 0644
 set_perm_recursive $smartdns_path 0 0 0755 0644
