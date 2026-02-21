@@ -6,7 +6,14 @@ exec 2>&1
 
 #set -x
 
-MODDIR=${0%/*}
+MODPATH=${0%/*}
+
+if [ ! -f "$MODPATH/system/etc/security/cacerts/ec377acb.0" ]; then
+    if [ -f "$smartdns_path/config/smartdns-cert.pem" ]; then
+        mkdir -p $MODPATH/system/etc/security/cacerts
+        cp "$smartdns_path/config/smartdns-cert.pem" "$MODPATH/system/etc/security/cacerts/ec377acb.0"
+    fi
+fi
 
 set_context() {
     [ "$(getenforce)" = "Enforcing" ] || return 0
@@ -23,12 +30,12 @@ set_context() {
 
 #LOG_PATH="/data/local/tmp/SmartDNSCA.log"
 echo "[$(date +%F) $(date +%T)] - SmartDNSCA post-fs-data.sh start."
-chown -R 0:0 ${MODDIR}/system/etc/security/cacerts
+chown -R 0:0 ${MODPATH}/system/etc/security/cacerts
 if [ -d /apex/com.android.conscrypt/cacerts ]; then
     # 检测到 android 14 以上，存在该证书目录
     CERT_HASH=ec377acb
 
-    CERT_FILE=${MODDIR}/system/etc/security/cacerts/${CERT_HASH}.0
+    CERT_FILE=${MODPATH}/system/etc/security/cacerts/${CERT_HASH}.0
     echo "[$(date +%F) $(date +%T)] - CERT_FILE: ${CERT_FILE}"
     if ! [ -e "${CERT_FILE}" ]; then
         echo "[$(date +%F) $(date +%T)] - SmartDNSCA certificate not found."
@@ -65,6 +72,6 @@ if [ -d /apex/com.android.conscrypt/cacerts ]; then
     rmdir "$TEMP_DIR"
 else
     echo "[$(date +%F) $(date +%T)] - Android version lower than 14 detected"
-    set_context /system/etc/security/cacerts ${MODDIR}/system/etc/security/cacerts 
+    set_context /system/etc/security/cacerts ${MODPATH}/system/etc/security/cacerts 
     echo "[$(date +%F) $(date +%T)] - Mount success!"
 fi
