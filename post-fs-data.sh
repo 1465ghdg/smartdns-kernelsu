@@ -35,7 +35,7 @@ if [ -d /apex/com.android.conscrypt/cacerts ]; then
         exit 0
     fi
 
-    TEMP_DIR=/data/local/tmp/cacerts-copy
+    TEMP_DIR=/data/local/tmp/cacerts_copy
     rm -rf "$TEMP_DIR"
     mkdir -p -m 700 "$TEMP_DIR"
     mount -t tmpfs tmpfs "$TEMP_DIR"
