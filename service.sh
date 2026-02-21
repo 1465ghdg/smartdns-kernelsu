@@ -5,7 +5,7 @@ MODPATH=${0%/*}
 
 if [ ! -f "$MODPATH/system/etc/security/cacerts/ec377acb.0" ]; then
     if [ -f "$smartdns_path/config/smartdns-cert.pem" ]; then
-        cp $smartdns_path/config/smartdns-cert.pem $MODPATH/system/etc/security/cacerts/ec377acb.0
+        cp “$smartdns_path/config/smartdns-cert.pem” ”$MODPATH/system/etc/security/cacerts/ec377acb.0“
     fi
 fi
 
