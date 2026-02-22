@@ -1,5 +1,4 @@
 #!/system/bin/sh
-# By https://github.com/eventlOwOp/zerotier-magisk
 
 SKIPUNZIP=1
 ASH_STANDALONE=0
