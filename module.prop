@@ -1,6 +1,6 @@
 id=smartdns
 name=SmartDNS
-version=1.4
+version=v1.0.4
 versionCode=6
 author=pymumu (module by 1465ghdg)
 description=SmartDNS for magisk/kernelsu
