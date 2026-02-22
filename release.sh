@@ -1,1 +1,1 @@
-zip -r smartdns.zip . -x ".*" -x "smartdns.zip" -x "release.sh"
+zip -r smartdns.zip . -x ".*" "smartdns.zip" "release.sh" "update.json" "changelog.md" "README.md"

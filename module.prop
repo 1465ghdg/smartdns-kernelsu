@@ -4,3 +4,4 @@ version=v1.0.0
 versionCode=1
 author=pymumu (module by 1465ghdg)
 description=SmartDNS for magisk/kernelsu
+updateJson=https://github.com/1465ghdg/smartdns-kernelsu/raw/main/update.json
