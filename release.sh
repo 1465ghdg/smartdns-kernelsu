@@ -1,0 +1,1 @@
+zip -r smartdns.zip . -x ".*" -x "smartdns.zip" -x "release.sh"
