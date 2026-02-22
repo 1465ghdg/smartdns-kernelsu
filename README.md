@@ -7,7 +7,7 @@
 配置文件位于 `/data/adb/smartdns/config/smartdns.conf`  
 // 显然, 你可以无视项目的配置文件自己写, 但路径相关 ~~最好~~ 别改（
 ## 关于项目
-因为写这个项目的原因是[原项目](https://github.com/x4455/smartdns-Android)太久没更新以及我不需要dns劫持, 广告过滤(那是mihomo该干的（）)和arm架构的二进制文件(好吧有空还是整一下arm的支持吧(别急, 或者反正改起来很简单你自己改算了（）))，所以需要的话自己参照原项目改改罢（
+因为写这个项目的原因是[原项目](https://github.com/x4455/smartdns-Android)太久没更新以及我不需要dns劫持, 广告过滤[^1]和arm架构的二进制文件[^2]，所以需要的话自己参照原项目改改罢（
 ## 项目使用的其他项目内容
 原项目(启发, bin/ca-certificates.zip): [smartdns-Android](https://github.com/x4455/smartdns-Android)
 
@@ -18,3 +18,6 @@ uninstall.sh : [box_for_magisk](https://github.com/taamarin/box_for_magisk)
 post-fs-data.sh : [Magisk-ProxyPinCA](https://gitee.com/wanghongenpin/Magisk-ProxyPinCA)
 
 customize.sh : [zerotier-magisk](https://github.com/eventlOwOp/zerotier-magisk)
+
+[^1]: 那是mihomo该干的（
+[^2]: 好吧有空还是整一下arm的支持吧(别急, 或者反正改起来很简单你自己改算了(确信))
