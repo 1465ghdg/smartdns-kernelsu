@@ -1,4 +1,5 @@
 #!/system/bin/sh
+# By https://github.com/taamarin/box_for_magisk
 
 smartdns_data_dir="/data/adb/smartdns"
 rm_data() {

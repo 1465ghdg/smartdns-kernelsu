@@ -1,5 +1,5 @@
 #!/system/bin/sh
-
+# By https://gitee.com/wanghongenpin/Magisk-ProxyPinCA/
 
 exec > /data/local/tmp/SmartDNSCA.log
 exec 2>&1
